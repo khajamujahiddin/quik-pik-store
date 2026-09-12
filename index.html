@@ -1,1 +1,201 @@
-LOAD_FROM_FILE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A&amp;S Quik Pik | Convenience &amp; Smoke Shop · Meriden, CT</title>
+  <meta name="description" content="A&S Quik Pik — convenience store and smoke shop at 692 E Main St, Meriden CT. Snacks, ice cream, vapes, tobacco, hookah & more." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { gold: { DEFAULT: "#d4a017", light: "#f0c14b", dark: "#a67c00" } },
+          fontFamily: { display: ["Cormorant Garamond", "Georgia", "serif"], sans: ["DM Sans", "system-ui", "sans-serif"] },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-mesh antialiased">
+  <header class="sticky top-0 z-50 border-b border-zinc-800/80 bg-black/80 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <span class="flex h-10 w-10 items-center justify-center rounded-lg border border-gold/50 bg-gold/10 font-display text-lg font-bold text-gold">A&amp;S</span>
+        <div>
+          <p class="font-display text-xl font-bold leading-none text-white group-hover:text-gold-light transition">Quik Pik</p>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-zinc-500">Meriden, CT</p>
+        </div>
+      </a>
+      <nav class="hidden items-center gap-6 sm:flex text-sm font-medium">
+        <a href="index.html" data-nav="home" class="nav-active border-b-2 border-gold pb-0.5 text-gold-light">Home</a>
+        <a href="shop.html" data-nav="shop" class="border-b-2 border-transparent pb-0.5 text-zinc-400 hover:text-white">Shop</a>
+        <a href="about.html" data-nav="about" class="border-b-2 border-transparent pb-0.5 text-zinc-400 hover:text-white">Visit Us</a>
+      </nav>
+      <a href="tel:8605431287" class="rounded-lg border border-gold/40 bg-gold/10 px-3 py-1.5 text-xs font-semibold text-gold-light hover:bg-gold/20 sm:text-sm">860-543-1287</a>
+    </div>
+    <nav class="flex justify-center gap-6 border-t border-zinc-900 px-4 py-2 text-xs sm:hidden">
+      <a href="index.html" class="text-gold-light font-semibold">Home</a>
+      <a href="shop.html" class="text-zinc-400">Shop</a>
+      <a href="about.html" class="text-zinc-400">Visit</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <div class="mx-auto max-w-6xl px-4 py-16 sm:py-24">
+        <div class="max-w-2xl">
+          <p class="mb-3 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-xs font-medium text-gold-light">
+            <span class="h-1.5 w-1.5 rounded-full bg-green-400 animate-pulse"></span>
+            Open for walk-ins · Meriden local
+          </p>
+          <h1 class="font-display text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
+            Your neighborhood<br />
+            <span class="text-gold-light">Quik Pik</span> stop
+          </h1>
+          <p class="mt-5 text-lg text-zinc-400 leading-relaxed max-w-xl">
+            Snacks, ice cream, drinks, phone cables — plus a full smoke shop selection for adults 21+.
+            Right on East Main Street in Meriden.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="shop.html" class="hero-glow rounded-xl bg-gold px-6 py-3 font-semibold text-black hover:bg-gold-light transition">Browse shop</a>
+            <a href="about.html" class="rounded-xl border border-zinc-600 px-6 py-3 font-semibold text-zinc-200 hover:border-gold/50 hover:text-gold-light transition">Directions &amp; hours</a>
+            <button type="button" id="home-smoke-cta" class="rounded-xl border border-amber-600/50 px-6 py-3 font-semibold text-amber-300 hover:bg-amber-500/10 transition">
+              Smoke shop 21+
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category strip -->
+    <section class="border-y border-zinc-800/80 bg-black/40">
+      <div class="mx-auto max-w-6xl px-4 py-10">
+        <h2 class="font-display text-2xl font-bold text-white mb-6">Shop by aisle</h2>
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          <a href="shop.html?cat=ice-cream" class="cat-tile rounded-xl border border-zinc-800 bg-zinc-900/60 p-4 text-center hover:border-gold/40 transition">
+            <span class="text-2xl">🍦</span>
+            <p class="mt-2 text-sm font-medium text-zinc-200">Ice Cream</p>
+          </a>
+          <a href="shop.html?cat=candy" class="cat-tile rounded-xl border border-zinc-800 bg-zinc-900/60 p-4 text-center hover:border-gold/40 transition">
+            <span class="text-2xl">🍬</span>
+            <p class="mt-2 text-sm font-medium text-zinc-200">Candy</p>
+          </a>
+          <a href="shop.html?cat=snacks" class="cat-tile rounded-xl border border-zinc-800 bg-zinc-900/60 p-4 text-center hover:border-gold/40 transition">
+            <span class="text-2xl">🥨</span>
+            <p class="mt-2 text-sm font-medium text-zinc-200">Snacks</p>
+          </a>
+          <a href="shop.html?cat=fragrance" class="cat-tile rounded-xl border border-zinc-800 bg-zinc-900/60 p-4 text-center hover:border-gold/40 transition">
+            <span class="text-2xl">✨</span>
+            <p class="mt-2 text-sm font-medium text-zinc-200">Fragrance</p>
+          </a>
+          <a href="shop.html?cat=phone" class="cat-tile rounded-xl border border-zinc-800 bg-zinc-900/60 p-4 text-center hover:border-gold/40 transition">
+            <span class="text-2xl">📱</span>
+            <p class="mt-2 text-sm font-medium text-zinc-200">Phone</p>
+          </a>
+          <button type="button" data-goto-restricted="vapes" class="cat-tile rounded-xl border border-amber-800/40 bg-amber-950/30 p-4 text-center hover:border-gold/50 transition w-full">
+            <span class="text-2xl">💨</span>
+            <p class="mt-2 text-sm font-medium text-amber-200">Vapes <span class="text-[10px] text-amber-500">21+</span></p>
+          </button>
+          <button type="button" data-goto-restricted="tobacco" class="cat-tile rounded-xl border border-amber-800/40 bg-amber-950/30 p-4 text-center hover:border-gold/50 transition w-full">
+            <span class="text-2xl">🚬</span>
+            <p class="mt-2 text-sm font-medium text-amber-200">Tobacco <span class="text-[10px] text-amber-500">21+</span></p>
+          </button>
+          <button type="button" data-goto-restricted="hookah" class="cat-tile rounded-xl border border-amber-800/40 bg-amber-950/30 p-4 text-center hover:border-gold/50 transition w-full">
+            <span class="text-2xl">🫖</span>
+            <p class="mt-2 text-sm font-medium text-amber-200">Hookah <span class="text-[10px] text-amber-500">21+</span></p>
+          </button>
+          <button type="button" data-goto-restricted="glass" class="cat-tile rounded-xl border border-amber-800/40 bg-amber-950/30 p-4 text-center hover:border-gold/50 transition w-full">
+            <span class="text-2xl">🔮</span>
+            <p class="mt-2 text-sm font-medium text-amber-200">Glass <span class="text-[10px] text-amber-500">21+</span></p>
+          </button>
+          <button type="button" data-goto-restricted="accessories" class="cat-tile rounded-xl border border-amber-800/40 bg-amber-950/30 p-4 text-center hover:border-gold/50 transition w-full">
+            <span class="text-2xl">📄</span>
+            <p class="mt-2 text-sm font-medium text-amber-200">Papers <span class="text-[10px] text-amber-500">21+</span></p>
+          </button>
+          <a href="shop.html?cat=lottery" class="cat-tile rounded-xl border border-zinc-800 bg-zinc-900/60 p-4 text-center hover:border-gold/40 transition">
+            <span class="text-2xl">🎟️</span>
+            <p class="mt-2 text-sm font-medium text-zinc-200">Lottery</p>
+          </a>
+          <a href="shop.html" class="cat-tile rounded-xl border border-zinc-700 bg-zinc-900 p-4 text-center hover:border-gold/40 transition">
+            <span class="text-2xl">🛒</span>
+            <p class="mt-2 text-sm font-medium text-zinc-200">All products</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured convenience -->
+    <section class="mx-auto max-w-6xl px-4 py-14">
+      <div class="flex items-end justify-between gap-4 mb-6">
+        <div>
+          <h2 class="font-display text-2xl font-bold text-white">Convenience favorites</h2>
+          <p class="text-sm text-zinc-500 mt-1">No age gate — grab &amp; go</p>
+        </div>
+        <a href="shop.html?cat=candy" class="text-sm text-gold hover:text-gold-light">View more →</a>
+      </div>
+      <div id="home-featured" class="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"></div>
+    </section>
+
+    <!-- Visit CTA -->
+    <section class="border-t border-zinc-800 bg-gradient-to-b from-zinc-950 to-black">
+      <div class="mx-auto max-w-6xl px-4 py-14 grid gap-8 md:grid-cols-2 items-center">
+        <div>
+          <h2 class="font-display text-3xl font-bold text-white">Visit A&amp;S Quik Pik</h2>
+          <p class="mt-3 text-zinc-400">692 E Main St<br />Meriden, CT 06450</p>
+          <p class="mt-2"><a href="tel:8605431287" class="text-gold-light font-semibold text-lg hover:underline">860-543-1287</a></p>
+          <a href="about.html" class="mt-6 inline-block rounded-xl bg-gold px-5 py-2.5 font-semibold text-black hover:bg-gold-light transition">Get directions</a>
+        </div>
+        <div class="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-6">
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            Family-friendly convenience up front; adult smoke shop selection verified in store.
+            Must be 21+ with valid ID for tobacco, vapes, and related products.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-zinc-800 bg-black px-4 py-10">
+    <div class="mx-auto max-w-6xl text-center sm:text-left grid gap-6 sm:grid-cols-3">
+      <div>
+        <p class="font-display text-xl font-bold text-gold">A&amp;S Quik Pik</p>
+        <p class="text-sm text-zinc-500 mt-1">692 E Main St, Meriden, CT 06450</p>
+      </div>
+      <div class="text-xs text-zinc-500 leading-relaxed space-y-2">
+        <p><strong class="text-zinc-400">21+ notice:</strong> Tobacco, nicotine, and smoking accessories sold only to adults 21 years or older. ID required.</p>
+        <p>Prices shown are suggested and <strong class="text-zinc-400">may vary in store</strong>.</p>
+      </div>
+      <div class="text-xs text-zinc-500 leading-relaxed">
+        <p><strong class="text-zinc-400">Disclaimer:</strong> Novelty gummies and similar products are sold as novelty items only; not for consumption where prohibited. Please consume responsibly.</p>
+        <p class="mt-3 text-zinc-600">© 2026 A&amp;S Quik Pik. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/age-gate.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      QuikPikUI.setActiveNav("home");
+      const featured = (window.QUIK_PIK_PRODUCTS || [])
+        .filter((p) => !p.ageRestricted && p.category !== "lottery")
+        .slice(0, 5);
+      const el = document.getElementById("home-featured");
+      if (el) el.innerHTML = featured.map((p) => QuikPikUI.renderCard(p)).join("");
+
+      async function goRestricted(cat) {
+        const ok = await QuikPikAge.requireForRestricted();
+        if (ok) location.href = "shop.html?cat=" + encodeURIComponent(cat);
+      }
+      document.getElementById("home-smoke-cta")?.addEventListener("click", () => goRestricted("vapes"));
+      document.querySelectorAll("[data-goto-restricted]").forEach((btn) => {
+        btn.addEventListener("click", () => goRestricted(btn.getAttribute("data-goto-restricted")));
+      });
+    });
+  </script>
+</body>
+</html>
